@@ -1,6 +1,7 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/react';
 import './Tab1.css';
+import FotoAluno from '../assets/image.png'; // ajuste conforme seu caminho
 
 const Tab1: React.FC = () => {
   return (
@@ -10,17 +11,19 @@ const Tab1: React.FC = () => {
           <IonTitle>Apresentação</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen className="apresentacao">
-       <div> <h1>Bem-vindo(a) ao meu app da Avaliação 2!</h1>
-        <p>Aluno: Roberto dos Santos Pinto Filho</p>
-        <p>Turma: ADS - Unisuam</p>
-        <p>Horário: Noite</p>
-
-        <img
-          src="assets/foto-perfil.jpg"
-          alt="Foto do aluno"
-          className="foto"
-        /></div>
+      
+      <IonContent className="apresentacao">
+        <IonCard className="card-centralizado">
+          <IonCardHeader>
+            <IonCardTitle>Avaliação formadora 2</IonCardTitle>
+          </IonCardHeader>
+          <IonCardContent>
+            <p><strong>Aluno:</strong> Roberto dos Santos Pinto Filho</p>
+            <p><strong>Turma:</strong> ADS - Unisuam</p>
+            <p><strong>Horário:</strong> Noite</p>
+            <img src="src/image.png" alt="Foto do aluno" className="foto" />
+          </IonCardContent>
+        </IonCard>
       </IonContent>
     </IonPage>
   );
